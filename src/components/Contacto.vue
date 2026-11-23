@@ -81,7 +81,7 @@
 
         <a href="/cv.pdf" download="CV_Brian_Piguave.pdf"
           class="btn btn-outline-light px-4 py-3 fw-semibold d-inline-flex align-items-center gap-2 rounded-3">
-          <i class="bi bi-file-earmark-arrow-down"></i> Descargar CV (PDF)
+          <i class="bi bi-file-earmark-arrow-down"></i> Descargar CV (PDF)k
         </a>
       </div>
 
