@@ -66,29 +66,29 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const categorias = ref([
+const categorias = [
   {
-    titulo: 'Frontend',
-    subtitulo: 'Maquetación e interactividad',
+    titulo: 'Frontend & Móvil',
+    subtitulo: 'Maquetación e interfaces',
     icono: 'bi bi-layout-wysiwyg',
     skills: [
       { nombre: 'HTML5', icono: 'devicon-html5-plain colored' },
       { nombre: 'CSS3', icono: 'devicon-css3-plain colored' },
       { nombre: 'JavaScript', icono: 'devicon-javascript-plain colored' },
-      { nombre: 'Bootstrap', icono: 'devicon-bootstrap-plain colored' }
+      { nombre: 'Bootstrap', icono: 'devicon-bootstrap-plain colored' },
+      { nombre: 'Flutter', icono: 'devicon-flutter-plain colored' }
     ]
   },
   {
-    titulo: 'Frameworks & Librerías',
-    subtitulo: 'Ecosistemas modernos',
+    titulo: 'Frameworks & CMS',
+    subtitulo: 'Ecosistemas de desarrollo',
     icono: 'bi bi-box-seam',
     skills: [
       { nombre: 'Vue.js', icono: 'devicon-vuejs-plain colored' },
       { nombre: 'React', icono: 'devicon-react-original colored' },
       { nombre: 'Laravel', icono: 'devicon-laravel-plain colored' },
-      { nombre: 'Express', icono: 'devicon-express-original text-white' }
+      { nombre: 'Express', icono: 'devicon-express-original text-white' },
+      { nombre: 'WordPress', icono: 'devicon-wordpress-plain text-white' }
     ]
   },
   {
@@ -96,25 +96,28 @@ const categorias = ref([
     subtitulo: 'Lógica de servidor y persistencia',
     icono: 'bi bi-database',
     skills: [
+      { nombre: 'Java', icono: 'devicon-java-plain colored' },
       { nombre: 'PHP', icono: 'devicon-php-plain colored' },
-      { nombre: 'Node.js', icono: 'devicon-nodejs-plain colored' },
       { nombre: 'Python', icono: 'devicon-python-plain colored' },
+      { nombre: 'Node.js', icono: 'devicon-nodejs-plain colored' },
       { nombre: 'SQL Server', icono: 'devicon-microsoftsqlserver-plain colored' },
-      { nombre: 'MongoDB', icono: 'devicon-mongodb-plain colored' }
+      { nombre: 'MongoDB', icono: 'devicon-mongodb-plain colored' },
+      { nombre: 'Firebase', icono: 'devicon-firebase-plain colored' }
     ]
   },
   {
     titulo: 'DevOps & Herramientas',
-    subtitulo: 'Despliegue y automatización',
+    subtitulo: 'Control de versiones y despliegue',
     icono: 'bi bi-tools',
     skills: [
+      { nombre: 'Git / GitHub', icono: 'devicon-git-plain colored' },
       { nombre: 'Docker', icono: 'devicon-docker-plain colored' },
       { nombre: 'VS Code', icono: 'devicon-vscode-plain colored' },
       { nombre: 'Nginx', icono: 'devicon-nginx-original colored', basic: true },
       { nombre: 'n8n', customSvg: 'n8n', basic: true }
     ]
   }
-])
+]
 </script>
 
 <style scoped>
@@ -132,17 +135,6 @@ const categorias = ref([
   background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(5, 7, 11, 0) 70%);
   pointer-events: none;
   z-index: 0;
-}
-
-.max-w-600 { max-width: 600px; }
-.text-accent { color: #3b82f6; }
-.text-light-muted { color: #94a3b8; }
-.border-navy { border-color: #1e293b !important; }
-
-.text-gradient {
-  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .bento-card {
@@ -167,14 +159,6 @@ const categorias = ref([
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.count-badge {
-  color: #60a5fa;
-  background-color: #070b14;
-  border: 1px solid #1e293b;
-  padding: 4px 10px;
-  border-radius: 8px;
 }
 
 .tech-item {

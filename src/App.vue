@@ -28,6 +28,7 @@
       <Inicio id="inicio" class="section-container" @navigate="scrollTo" />
       <Habilidades id="habilidades" class="section-container" />
       <Proyectos id="proyectos" class="section-container" />
+      <Educacion id="educacion" class="section-container" />
       <Contacto id="contacto" class="section-container" />
     </main>
   </div>
@@ -37,12 +38,14 @@
 import Inicio from './components/Inicio.vue'
 import Habilidades from './components/Habilidades.vue'
 import Proyectos from './components/Proyectos.vue'
+import Educacion from './components/Educacion.vue'
 import Contacto from './components/Contacto.vue'
 
 const menuItems = [
   { id: 'inicio', nombre: 'Inicio' },
   { id: 'habilidades', nombre: 'Habilidades' },
   { id: 'proyectos', nombre: 'Proyectos' },
+  { id: 'educacion', nombre: 'Educación' },
   { id: 'contacto', nombre: 'Contacto' }
 ]
 
@@ -53,39 +56,3 @@ const scrollTo = (id) => {
   }
 }
 </script>
-
-<style scoped>
-.custom-navbar {
-  background-color: rgba(7, 9, 14, 0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #1e293b;
-}
-
-.border-navy {
-  border-color: #1e293b !important;
-}
-
-.btn-nav {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  transition: color 0.2s ease-in-out;
-}
-
-.btn-nav:hover {
-  color: #3b82f6 !important;
-}
-
-/* Aplicado a la etiqueta raíz de cada componente hijo */
-:deep(.section-container) {
-  width: 100%;
-  min-height: 100vh;
-  scroll-margin-top: 70px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-</style>
