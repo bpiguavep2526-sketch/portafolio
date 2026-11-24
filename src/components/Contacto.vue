@@ -64,7 +64,7 @@
             <div>
               <h3 class="h6 text-white fw-bold mb-1">Ubicación</h3>
               <span class="text-light-muted small d-block">
-                08025 Barcelona, España[cite: 7]
+                08025 Barcelona, España
               </span>
             </div>
           </div>
