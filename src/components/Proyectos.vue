@@ -2,26 +2,25 @@
 <template>
   <div class="proyectos-wrapper w-100 py-5">
     <div class="container">
-
       <!-- Encabezado y Filtros -->
       <div class="text-center mb-5">
         <span class="text-accent font-monospace small text-uppercase tracking-wider">Portafolio</span>
-        <h2 class="display-4 fw-bold text-white mt-1 mb-4">
+        <h2 class="display-4 fw-bold text-white mt-1">
           Proyectos <span class="text-gradient">Destacados</span>
         </h2>
+        <p class="text-light-muted max-w-600 mx-auto mt-2 mb-4">
+          Una selección de aplicaciones web que he desarrollado para poner en práctica distintas tecnologías.
+        </p>
 
         <div class="d-flex flex-wrap justify-content-center gap-2">
-          <button 
-            v-for="filtro in filtros" 
-            :key="filtro" 
-            @click="filtroActivo = filtro"
+          <button v-for="filtro in filtros" :key="filtro" @click="filtroActivo = filtro"
             class="btn btn-filter px-3 py-1 rounded-pill small fw-medium"
-            :class="{ 'active': filtroActivo === filtro }"
-          >
+            :class="{ 'active': filtroActivo === filtro }">
             {{ filtro }}
           </button>
         </div>
       </div>
+
 
       <!-- Grid de Cartas -->
       <div class="row g-4">
@@ -40,18 +39,10 @@
 
             <!-- Imagen con overlay en hover -->
             <div class="img-wrapper position-relative overflow-hidden">
-              <img 
-                :src="proyecto.imagen" 
-                :alt="proyecto.nombre"
-                class="w-100 h-100 object-fit-cover project-img" 
-              />
+              <img :src="proyecto.imagen" :alt="proyecto.nombre" class="w-100 h-100 object-fit-cover project-img" />
               <div class="img-overlay d-flex align-items-center justify-content-center">
-                <a 
-                  :href="proyecto.repoUrl" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  class="btn btn-light rounded-pill px-4 py-2 fw-semibold shadow"
-                >
+                <a :href="proyecto.repoUrl" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-light rounded-pill px-4 py-2 fw-semibold shadow">
                   <i class="bi bi-github me-2"></i>Explorar Repositorio
                 </a>
               </div>
@@ -69,11 +60,8 @@
               </p>
 
               <div class="d-flex flex-wrap gap-2 pt-3 border-top border-navy">
-                <div 
-                  v-for="(tech, index) in proyecto.tecnologias" 
-                  :key="index"
-                  class="tech-pill px-2 py-1 rounded-2 d-inline-flex align-items-center gap-2"
-                >
+                <div v-for="(tech, index) in proyecto.tecnologias" :key="index"
+                  class="tech-pill px-2 py-1 rounded-2 d-inline-flex align-items-center gap-2">
                   <i :class="obtenerIcono(tech)" class="fs-6"></i>
                   <span class="small text-light-muted">{{ tech }}</span>
                 </div>
@@ -213,7 +201,9 @@ const proyectosFiltrados = computed(() => {
   background-color: #07090e;
 }
 
-.project-img { transition: transform 0.6s ease; }
+.project-img {
+  transition: transform 0.6s ease;
+}
 
 .img-overlay {
   position: absolute;
@@ -224,8 +214,13 @@ const proyectosFiltrados = computed(() => {
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover .img-overlay { opacity: 1; }
-.project-card:hover .project-img { transform: scale(1.06); }
+.project-card:hover .img-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.06);
+}
 
 .badge-category {
   color: #60a5fa;
@@ -241,5 +236,7 @@ const proyectosFiltrados = computed(() => {
   transition: border-color 0.2s ease;
 }
 
-.tech-pill:hover { border-color: #3b82f6; }
+.tech-pill:hover {
+  border-color: #3b82f6;
+}
 </style>

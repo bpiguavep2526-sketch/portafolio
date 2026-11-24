@@ -1,52 +1,41 @@
 <!-- components/Inicio.vue -->
 <template>
   <div class="inicio-wrapper w-100 position-relative overflow-hidden">
+    <!-- Resplandor ambiental de fondo -->
     <div class="ambient-glow"></div>
 
     <div class="container position-relative z-1">
       <div class="row align-items-center g-5">
-        
+
         <!-- Columna Izquierda -->
         <div class="col-lg-7 text-center text-lg-start">
           <h1 class="display-3 fw-bold mb-2 text-white tracking-tight">
             Soy <span class="text-gradient">Brian Piguave</span>
           </h1>
-          
+
           <h2 class="h4 fw-light mb-4 text-light-muted">
             Desarrollador de Aplicaciones Web (DAW)
           </h2>
-          
+
           <p class="lead text-light-description mb-4 max-w-600 mx-auto mx-lg-0">
-            Estudiante de último curso de Desarrollo de Aplicaciones Web con base en desarrollo frontend y backend. Me gusta cuidar los detalles, resolver problemas lógicos y seguir aprendiendo nuevas tecnologías cada día.
+            Estudiante de último curso de Desarrollo de Aplicaciones Web con base en desarrollo frontend y backend. Me
+            gusta cuidar los detalles, resolver problemas lógicos y seguir aprendiendo nuevas tecnologías cada día.
           </p>
-          
+
           <!-- Redes Sociales -->
           <div class="d-flex justify-content-center justify-content-lg-start gap-3 mb-4">
-            <a 
-              href="https://www.linkedin.com/in/brian-piguave-pilligua/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="social-icon" 
-              title="LinkedIn"
-            >
+            <a href="https://www.linkedin.com/in/brian-piguave-pilligua/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" title="LinkedIn">
               <i class="bi bi-linkedin fs-5"></i>
             </a>
 
-            <a 
-              href="https://github.com/bpiguavep2526-sketch" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="social-icon" 
-              title="GitHub"
-            >
+            <a href="https://github.com/bpiguavep2526-sketch" target="_blank" rel="noopener noreferrer"
+              class="social-icon" title="GitHub">
               <i class="bi bi-github fs-5"></i>
             </a>
 
-            <a 
-              href="mailto:brian23pp@gmail.com?subject=Contacto%20desde%20tu%20Portafolio" 
-              class="social-icon" 
-              title="Enviar Correo"
-            >
+            <a href="mailto:brian23pp@gmail.com?subject=Contacto%20desde%20tu%20Portafolio" class="social-icon"
+              title="Enviar Correo">
               <i class="bi bi-envelope-fill fs-5"></i>
             </a>
           </div>
@@ -57,43 +46,39 @@
               Contáctame
             </button>
 
-            <a 
-              href="/cv.pdf" 
-              download="CV_Brian_Piguave.pdf" 
-              class="btn btn-outline-custom btn-lg px-4 py-2 d-inline-flex align-items-center gap-2"
-            >
+            <a href="/cv.pdf" download="CV_Brian_Piguave.pdf"
+              class="btn btn-outline-custom btn-lg px-4 py-2 d-inline-flex align-items-center gap-2">
               <i class="bi bi-file-earmark-arrow-down"></i> Descargar CV
             </a>
           </div>
         </div>
 
-        <!-- Columna Derecha -->
+        <!-- Columna Derecha: Composición Visual -->
         <div class="col-lg-5">
           <div class="position-relative d-flex justify-content-center align-items-center visual-stage mx-auto">
+
+            <!-- Resplandor detrás de la tarjeta -->
             <div class="card-backlight"></div>
 
+            <!-- Marco decorativo con la imagen de código -->
             <div class="code-frame rounded-4 overflow-hidden">
               <div class="frame-topbar px-3 py-2 d-flex align-items-center gap-2">
                 <span class="frame-dot bg-danger"></span>
                 <span class="frame-dot bg-warning"></span>
                 <span class="frame-dot bg-success"></span>
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
-                alt="Código de programación" 
-                class="img-fluid decor-img" 
-              />
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80"
+                alt="Código de programación" class="img-fluid decor-img" />
             </div>
 
+            <!-- Tu Foto de Perfil (Asegúrate de guardar perfil.jpg en public/img/) -->
             <div class="position-absolute profile-wrapper">
               <div class="profile-ring">
-                <img 
-                  src="https://via.placeholder.com/180" 
-                  alt="Brian Piguave Foto Perfil"
-                  class="img-fluid rounded-circle profile-img" 
-                />
+                <img src="/img/perfil.png" alt="Brian Piguave Foto Perfil"
+                  class="img-fluid rounded-circle profile-img" />
               </div>
             </div>
+
           </div>
         </div>
 
@@ -109,7 +94,7 @@ defineEmits(['navigate'])
 <style scoped>
 .inicio-wrapper {
   background-color: #05070b;
-  background-image: 
+  background-image:
     linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
   background-size: 42px 42px;
@@ -128,8 +113,11 @@ defineEmits(['navigate'])
   z-index: 0;
 }
 
-.tracking-tight { letter-spacing: -0.02em; }
+.tracking-tight {
+  letter-spacing: -0.02em;
+}
 
+/* Iconos Sociales */
 .social-icon {
   color: #cbd5e1;
   background-color: rgba(15, 23, 42, 0.85);
@@ -152,6 +140,7 @@ defineEmits(['navigate'])
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
 
+/* Botón Principal */
 .btn-navy {
   background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   color: #ffffff;
@@ -168,6 +157,7 @@ defineEmits(['navigate'])
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
 }
 
+/* Botón Secundario */
 .btn-outline-custom {
   background-color: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(8px);
@@ -186,6 +176,7 @@ defineEmits(['navigate'])
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
 }
 
+/* Escenario Visual (Columna Derecha) */
 .visual-stage {
   max-width: 440px;
   padding: 20px;
@@ -201,7 +192,9 @@ defineEmits(['navigate'])
   transition: opacity 0.4s ease;
 }
 
-.visual-stage:hover .card-backlight { opacity: 0.4; }
+.visual-stage:hover .card-backlight {
+  opacity: 0.4;
+}
 
 .code-frame {
   width: 100%;
@@ -238,13 +231,17 @@ defineEmits(['navigate'])
   transition: opacity 0.4s ease;
 }
 
-.visual-stage:hover .decor-img { opacity: 0.6; }
+.visual-stage:hover .decor-img {
+  opacity: 0.6;
+}
 
 .profile-wrapper {
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.visual-stage:hover .profile-wrapper { transform: scale(1.06); }
+.visual-stage:hover .profile-wrapper {
+  transform: scale(1.06);
+}
 
 .profile-ring {
   padding: 4px;

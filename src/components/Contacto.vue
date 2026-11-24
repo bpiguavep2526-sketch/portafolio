@@ -79,9 +79,9 @@
           <i class="bi bi-send-fill"></i> Escribirme un correo
         </a>
 
-        <a href="/cv.pdf" download="CV_Brian_Piguave.pdf"
+        <a href="cv.pdf" download="CV_Brian_Piguave.pdf"
           class="btn btn-outline-light px-4 py-3 fw-semibold d-inline-flex align-items-center gap-2 rounded-3">
-          <i class="bi bi-file-earmark-arrow-down"></i> Descargar CV (PDF)k
+          <i class="bi bi-file-earmark-arrow-down"></i> Descargar CV (PDF)
         </a>
       </div>
 

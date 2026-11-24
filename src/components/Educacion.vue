@@ -91,7 +91,7 @@ const formacionDB = [
         actual: true,
         icono: 'bi bi-code-square',
         descripcion: 'Especialización en arquitectura web full-stack, despliegue de aplicaciones, diseño de interfaces modernas y desarrollo backend. Actualmente cursando el módulo de formación en centros de trabajo (prácticas).',
-        etiquetas: ['Desarrollo Frontend & Backend', 'APIs REST', 'Despliegue Web', 'Módulo de Prácticas']
+        etiquetas: ['Desarrollo Frontend & Backend', 'APIs REST', 'Despliegue Web']
     },
     {
         titulo: 'CFGS en Desarrollo de Aplicaciones Multiplataforma (DAM)',
@@ -110,8 +110,8 @@ const formacionDB = [
         periodo: 'Finalizado',
         actual: false,
         icono: 'bi bi-mortarboard-fill',
-        descripcion: 'Formación académica general con base en ciencias, matemáticas y resolución lógica de problemas.',
-        etiquetas: ['Formación General', 'Base Lógica y Matemática']
+        descripcion: 'Formación académica general con base en ciencias.',
+        etiquetas: ['Formación General']
     }
 ]
 </script>
